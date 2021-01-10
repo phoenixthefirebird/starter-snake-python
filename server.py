@@ -55,8 +55,9 @@ class Battlesnake(object):
         save(data)
         move = ["up", "down", "left", "right"]
         move = reverse(data)
-        move = food(data,move)
         move = border(data,move)
+        move = myself(data,move)
+        move = food(data,move)
         next = random.choice(move)
 
 
