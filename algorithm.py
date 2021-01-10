@@ -97,6 +97,6 @@ def myself(data, move):
             move.remove("up")
         if pos["y"] == heady - 1 and "down" in move:
             move.remove("down")
-        print(move)
-        return move
+    print(move)
+    return move
 
