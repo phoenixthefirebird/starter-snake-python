@@ -52,7 +52,6 @@ class Battlesnake(object):
         data = cherrypy.request.json
         save(data)
         move = ["up", "down", "left", "right"]
-        move = reverse(data)
         move = border(data,move)
         move = myself(data,move)
         move = food(data,move)

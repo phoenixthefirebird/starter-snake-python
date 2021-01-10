@@ -17,29 +17,6 @@ def save(data):
     global heady
     heady = data["you"]["head"]["y"]
 
-# This function prevents the snake from running right back into itself
-def reverse(data):
-    global headx
-    horDif = data["you"]["body"][1]["x"] - headx
-    global heady
-    verDif = data["you"]["body"][1]["y"] - heady
-    if (horDif > 0):
-        print(["up", "down", "left"])
-        return ["up", "down", "left"]
-    if (horDif < 0):
-        print(["up", "down", "right"])
-        return ["up", "down", "right"]
-    if (verDif > 0):
-        print(["down", "left", "right"])
-        return ["down", "left", "right"]
-    if(verDif < 0):
-        print(["up", "left", "right"])
-        return ["up", "left", "right"]
-    else:
-      print(["up","down","right","left"])
-      return ["up","down","right","left"]
-
-
 def food(data, move):
     # This function seeks the food
     global width, height, headx, heady
