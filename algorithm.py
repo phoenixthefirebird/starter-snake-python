@@ -82,13 +82,13 @@ def myself(data, move):
                 move.remove("up")
             if pos["y"] == heady - 1 and "down" in move:
                 move.remove("down")
-    if general["up"] > length /3 :
+    if general["up"] > length /3 and "up" in move:
         move.remove("up")
-    if general["down"] > length / 3:
+    if general["down"] > length / 3 and "down" in move:
         move.remove("down")
-    if general["left"] > length /3:
+    if general["left"] > length /3 and "left" in move:
         move.remove("left")
-    if general["right"] > length / 3:
+    if general["right"] > length / 3 and "right" in move:
         move.remove("right")
     print(move)
     return move
