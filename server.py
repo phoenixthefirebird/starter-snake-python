@@ -57,8 +57,6 @@ class Battlesnake(object):
         move = food(data,move)
         next = random.choice(move)
 
-
-
         # Choose a random direction to move in
         shouts = ["Impossible Enermy", "That looks delicious", "Hmmm I am hungry", "Grrrrr", "Do I need to know recursion?", "Getting big!"]
         shout = random.choice(shouts)

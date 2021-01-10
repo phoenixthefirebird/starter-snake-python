@@ -6,10 +6,8 @@ headx = 0
 def set(data):
     global width
     width = data["board"]["width"]
-    print(width)
     global height
     height = data["board"]["height"]
-    print(height)
 
 def save(data):
     global headx
