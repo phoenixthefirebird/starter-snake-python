@@ -17,8 +17,6 @@ heady = 0
 
 class Battlesnake(object):
 
-
-
     @cherrypy.expose
     @cherrypy.tools.json_out()
     def index(self):
