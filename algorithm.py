@@ -45,13 +45,13 @@ def food(data, move):
 #this function avoids the border
 def border(data,move):
   global headx, heady
-  if heady + 1 == height and "up" in move:
+  if heady == height and "up" in move:
       move.remove("up")
-  if heady - 1 == 0 and "down" in move:
+  if heady == 0 and "down" in move:
       move.remove("down")
-  if headx - 1 == 0 and "left" in move:
+  if headx == 0 and "left" in move:
       move.remove("left")
-  if headx + 1 == width and "right" in move:
+  if headx == width and "right" in move:
       move.remove("right")
   print(move)
   return move
