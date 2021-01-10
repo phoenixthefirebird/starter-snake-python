@@ -62,7 +62,6 @@ def myself(data, move):
     global length
     length = data["you"]["length"]
     global headx, heady
-    general = {"up":0,"down":0,"left" :0, "right" : 0}
     for pos in data["you"]["body"]:
         if pos["y"] == heady:
             if pos["x"] == headx + 1 and "right" in move:
