@@ -64,14 +64,6 @@ def myself(data, move):
     global headx, heady
     general = {"up":0,"down":0,"left" :0, "right" : 0}
     for pos in data["you"]["body"]:
-        if pos["y"] > heady:
-            general["up"] += 1
-        if pos["y"] < heady:
-            general["down"] += 1
-        if pos["x"] > headx:
-            general["right"] += 1
-        if pos["x"] < heady:
-            general["left"] += 1
         if pos["y"] == heady:
             if pos["x"] == headx + 1 and "right" in move:
                 move.remove("right")
@@ -82,14 +74,6 @@ def myself(data, move):
                 move.remove("up")
             if pos["y"] == heady - 1 and "down" in move:
                 move.remove("down")
-    if general["up"] > length /3 and "up" in move:
-        move.remove("up")
-    if general["down"] > length / 3 and "down" in move:
-        move.remove("down")
-    if general["left"] > length /3 and "left" in move:
-        move.remove("left")
-    if general["right"] > length / 3 and "right" in move:
-        move.remove("right")
     print(move)
     return move
 
