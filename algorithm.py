@@ -60,14 +60,16 @@ def border(data,move):
 def myself(data, move):
     global headx, heady
     for pos in data["you"]["body"]:
-        if pos["x"] == headx + 1 and "right" in move:
-            move.remove("right")
-        if pos["x"] == headx - 1 and "left" in move:
-            move.remove("left")
-        if pos["y"] == heady + 1 and "up" in move:
-            move.remove("up")
-        if pos["y"] == heady - 1 and "down" in move:
-            move.remove("down")
+        if pos["y"] == heady:
+            if pos["x"] == headx + 1 and "right" in move:
+                move.remove("right")
+            if pos["x"] == headx - 1 and "left" in move:
+                move.remove("left")
+        if pos["x"] == headx:
+            if pos["y"] == heady + 1 and "up" in move:
+                move.remove("up")
+            if pos["y"] == heady - 1 and "down" in move:
+                move.remove("down")
     print(move)
     return move
 
